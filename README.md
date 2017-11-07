@@ -18,10 +18,10 @@ To run AdamW for nEpochs=1500 epochs without restarts with initial learning rate
 CUDA_VISIBLE_DEVICES=0 th main.lua -algorithmType ADAMW -nEpochs 1500 -Te 1500 -Tmult 2 -widenFactor 6 -LR 0.001 -weightDecay 0.025 -dataset cifar10 -nGPU 1 -depth 26 -irun 1 -batchSize 128 -momentum 0.9 -shareGradInput false -optnet true -netType shakeshake -forwardShake true -backwardShake true -shakeImage true -lrShape cosine -LRdec true
 ```
 
-To run AdamW for nEpochs=1500 epochs with restarts, where the first restart will happen after Te=100 epochs. 
+To run AdamW for nEpochs=1500 epochs with restarts, where the first restart will happen after Te=100 epochs and the second restart after 200 more epochs because 100*Tmult=200. 
 
 ```
-CUDA_VISIBLE_DEVICES=0 th main.lua -algorithmType ADAMW -nEpochs 1500 -Te 1500 -Tmult 2 -widenFactor 6 -LR 0.001 -weightDecay 0.025 -dataset cifar10 -nGPU 1 -depth 26 -irun 1 -batchSize 128 -momentum 0.9 -shareGradInput false -optnet true -netType shakeshake -forwardShake true -backwardShake true -shakeImage true -lrShape cosine -LRdec true
+CUDA_VISIBLE_DEVICES=0 th main.lua -algorithmType ADAMW -nEpochs 1500 -Te 100 -Tmult 2 -widenFactor 6 -LR 0.001 -weightDecay 0.025 -dataset cifar10 -nGPU 1 -depth 26 -irun 1 -batchSize 128 -momentum 0.9 -shareGradInput false -optnet true -netType shakeshake -forwardShake true -backwardShake true -shakeImage true -lrShape cosine -LRdec true
 ```
 
 To run SGDW for nEpochs=150 epochs without restarts with initial learning rate LR=0.05, normalized weight decay weightDecay=0.025   
@@ -30,10 +30,10 @@ To run SGDW for nEpochs=150 epochs without restarts with initial learning rate L
 CUDA_VISIBLE_DEVICES=0 th main.lua -algorithmType SGDW -nEpochs 1500 -Te 1500 -Tmult 2 -widenFactor 6 -LR 0.05 -weightDecay 0.025 -dataset cifar10 -nGPU 1 -depth 26 -irun 1 -batchSize 128 -momentum 0.9 -shareGradInput false -optnet true -netType shakeshake -forwardShake true -backwardShake true -shakeImage true -lrShape cosine -LRdec true
 ```
 
-To run SGDW for nEpochs=150 epochs with restarts, where the first restart will happen after Te=100 epochs. 
+To run SGDW for nEpochs=150 epochs with restarts, where the first restart will happen after Te=100 epochs and the second restart after 200 more epochs because 100*Tmult=200. 
 
 ```
-CUDA_VISIBLE_DEVICES=0 th main.lua -algorithmType SGDW -nEpochs 1500 -Te 1500 -Tmult 2 -widenFactor 6 -LR 0.001 -weightDecay 0.025 -dataset cifar10 -nGPU 1 -depth 26 -irun 1 -batchSize 128 -momentum 0.9 -shareGradInput false -optnet true -netType shakeshake -forwardShake true -backwardShake true -shakeImage true -lrShape cosine -LRdec true
+CUDA_VISIBLE_DEVICES=0 th main.lua -algorithmType SGDW -nEpochs 1500 -Te 100 -Tmult 2 -widenFactor 6 -LR 0.001 -weightDecay 0.025 -dataset cifar10 -nGPU 1 -depth 26 -irun 1 -batchSize 128 -momentum 0.9 -shareGradInput false -optnet true -netType shakeshake -forwardShake true -backwardShake true -shakeImage true -lrShape cosine -LRdec true
 ```
 
 Acknowledgments: We thank Patryk Chrabaszcz for creating functions dealing with ImageNet32x32 dataset.
