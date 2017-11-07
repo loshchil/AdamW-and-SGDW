@@ -36,6 +36,7 @@ To run SGDW for nEpochs=150 epochs with restarts, where the first restart will h
 CUDA_VISIBLE_DEVICES=0 th main.lua -algorithmType SGDW -nEpochs 1500 -Te 1500 -Tmult 2 -widenFactor 6 -LR 0.001 -weightDecay 0.025 -dataset cifar10 -nGPU 1 -depth 26 -irun 1 -batchSize 128 -momentum 0.9 -shareGradInput false -optnet true -netType shakeshake -forwardShake true -backwardShake true -shakeImage true -lrShape cosine -LRdec true
 ```
 
+Acknowledgments: We thank Patryk Chrabaszcz for creating functions dealing with ImageNet32x32 dataset.
 
 
 #Shake-Shake regularization of 3-branch residual networks
