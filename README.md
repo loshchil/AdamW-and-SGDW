@@ -1,4 +1,4 @@
-#Fixing Weight Decay Regularization in Adam
+# Fixing Weight Decay Regularization in Adam
 
 This repository contains the code for the paper Fixing Weight Decay Regularization in Adam by Ilya Loshchilov and Frank Hutter [arXiv](https://arxiv.org/). 
 
