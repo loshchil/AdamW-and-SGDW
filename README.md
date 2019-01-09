@@ -1,6 +1,6 @@
-# Fixing Weight Decay Regularization in Adam
+# Decoupled Weight Decay Regularization (old title: Fixing Weight Decay Regularization in Adam)
 
-This repository contains the code for the paper Fixing Weight Decay Regularization in Adam by Ilya Loshchilov and Frank Hutter [arXiv](https://arxiv.org/abs/1711.05101). 
+This repository contains the code for the paper Decoupled Weight Decay Regularization (old title: Fixing Weight Decay Regularization in Adam) by Ilya Loshchilov and Frank Hutter, ICLR 2019 [arXiv](https://arxiv.org/abs/1711.05101). 
 
 The code represents a tiny modification of the source code provided for the Shake-Shake regularization by Xavier Gastaldi [arXiv](https://arxiv.org/abs/1705.07485). Since the usage of both is very similar, the introduction and description of the original Shake-Shake code is given below. Please consider to  *first* run the Shake-Shake code and then our code. 
 
